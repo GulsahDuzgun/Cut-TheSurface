@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Abstracts.Inputs;
 using CutTheSurface.JumWithRigidBody;
 using CutTheSurface.Movements;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CutTheSurface.Controllers
 {
@@ -13,7 +15,10 @@ namespace CutTheSurface.Controllers
         [SerializeField] private float _moveSpeed = 10f;
         [SerializeField] private float _horizontalDirection = 0f;
         [SerializeField] private float _addForce=300f;
-        [SerializeField] private bool isJump;
+       
+        private IInputReader _input;
+        float _horizontal;
+        bool _isJump;
         
         private HorizontalMover _horizontalMover;
         private JumpWithRigidBody _jumpWithRigidBody;
@@ -21,16 +26,30 @@ namespace CutTheSurface.Controllers
         {
             _horizontalMover = new HorizontalMover(this);
             _jumpWithRigidBody = new JumpWithRigidBody(this);
+            _input = new InputReader(GetComponent<PlayerInput>());
+        }
+
+        void Update()
+        {
+            _horizontal=_input.Horizontal;
+            _isJump = _input.IsJump;
+
+            if (_input.IsJump)
+            {
+                _isJump = true;
+            }
+
         }
 
         private void FixedUpdate()
         {
-            _horizontalMover.TickFixed(_moveSpeed,_horizontalDirection);
+            Debug.Log(_isJump);
+            _horizontalMover.TickFixed(_horizontal , _moveSpeed);
 
-            if (isJump)
+            if (_isJump)
             {
                 _jumpWithRigidBody.TickFixed(_addForce);
-                isJump = false;
+                _isJump = false;
             }
             
         }

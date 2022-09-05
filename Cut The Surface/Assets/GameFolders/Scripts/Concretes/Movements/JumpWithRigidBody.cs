@@ -8,6 +8,9 @@ namespace  CutTheSurface.JumWithRigidBody
     public class JumpWithRigidBody
     {
         private Rigidbody _rigidbody;
+        
+        //velocity sabit hızı temsil eder ve zıplama anında  y eksenindeki hız sabit olmadığı için burası false döner 
+        public bool CanJump => _rigidbody.velocity.y != 0f;
 
         public JumpWithRigidBody(PlayerController playerController)
         {
@@ -17,7 +20,7 @@ namespace  CutTheSurface.JumWithRigidBody
 
         public void TickFixed(float jumpForce)
         {
-            if(_rigidbody.velocity.y!=0) return;
+            if(CanJump) return;
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.AddForce(Vector3.up*Time.deltaTime*jumpForce);
         }

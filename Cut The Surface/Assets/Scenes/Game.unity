@@ -387,7 +387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 724780814687732418, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 724780814687732418, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
       propertyPath: m_LocalPosition.y
@@ -450,8 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _moveSpeed: 10
   _horizontalDirection: 0
-  _addForce: 1500
-  isJump: 0
+  _addForce: 2500
 --- !u!136 &5169837428756763939
 CapsuleCollider:
   m_ObjectHideFlags: 0

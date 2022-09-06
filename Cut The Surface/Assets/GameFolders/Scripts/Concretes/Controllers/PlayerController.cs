@@ -13,8 +13,8 @@ namespace CutTheSurface.Controllers
     public class PlayerController : MonoBehaviour
     {
         [SerializeField] private float _moveSpeed = 10f;
-        [SerializeField] private float _horizontalDirection = 0f;
         [SerializeField] private float _addForce=300f;
+        [SerializeField] private float _moveBoundary=4.5f;
        
         private IInputReader _input;
         float _horizontal;
@@ -22,6 +22,9 @@ namespace CutTheSurface.Controllers
         
         private HorizontalMover _horizontalMover;
         private JumpWithRigidBody _jumpWithRigidBody;
+        public float MoveSpeed => _moveSpeed;
+        public float MoveBoundary => _moveBoundary;
+        
         private void Awake()
         {
             _horizontalMover = new HorizontalMover(this);
@@ -44,7 +47,7 @@ namespace CutTheSurface.Controllers
         private void FixedUpdate()
         {
             Debug.Log(_isJump);
-            _horizontalMover.TickFixed(_horizontal , _moveSpeed);
+            _horizontalMover.TickFixed(_horizontal );
 
             if (_isJump)
             {

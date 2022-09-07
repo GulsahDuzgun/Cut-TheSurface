@@ -20,11 +20,12 @@ namespace  CutTheSurface.JumWithRigidBody
 
         public void TickFixed(float jumpForce)
         {
-            if(CanJump) return;
+            if (CanJump) return;
             _rigidbody.velocity = Vector3.zero;
             _rigidbody.AddForce(Vector3.up*Time.deltaTime*jumpForce);
+            
         }
-
+        
     }
 }
 

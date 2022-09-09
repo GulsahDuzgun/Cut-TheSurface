@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using CutTheSurface.Managers;
 using UnityEngine;
 
-namespace  CutTheSurface.Uis
+namespace CutTheSurface.Uis
 {
-    public class MenuPanel : MonoBehaviour
+    public class GameOverPanel : MonoBehaviour
     {
-        public void StartButton()
+        public void TryAgainButton()
         {
             GameManager.Instance.LoadScene("Game");
         }
 
-        public void ExitButton()
+        public void QuitButton()
         {
-            GameManager.Instance.ExitGame();
+            GameManager.Instance.LoadScene("Menu");
         }
- 
+
     }
     
 }

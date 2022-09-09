@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using CutTheSurface.Abstracts.Inputs;
 using CutTheSurface.JumWithRigidBody;
+using CutTheSurface.Managers;
 using CutTheSurface.Movements;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -19,6 +20,7 @@ namespace CutTheSurface.Controllers
         private IInputReader _input;
         float _horizontal;
         bool _isJump;
+        bool _isdead = false;
         
         private HorizontalMover _horizontalMover;
         private JumpWithRigidBody _jumpWithRigidBody;
@@ -34,6 +36,7 @@ namespace CutTheSurface.Controllers
 
         void Update()
         {
+            if(_isdead==true) return;
             _horizontal=_input.Horizontal;
             _isJump = _input.IsJump;
 
@@ -55,6 +58,16 @@ namespace CutTheSurface.Controllers
                 _isJump = false;
             }
             
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            EnemyController enemyController = other.GetComponent<EnemyController>();
+            if (enemyController != null)
+            {
+                _isdead = true;
+                GameManager.Instance.StopGame();
+            }
         }
     }
     

@@ -1,24 +1,26 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Abstracts.Controllers;
+using CutTheSurface.Abstracts.Movements;
 using CutTheSurface.Controllers;
 using UnityEngine;
 
 namespace CutTheSurface.Movements
 {
-    public class HorizontalMover
+    public class HorizontalMover:IMover
     {
-        private PlayerController _playerController;
+        IEntityController _playerController;
         float _moveSpeed;
         float _moveboundary;
-        public HorizontalMover(PlayerController playerController)
+        public HorizontalMover(IEntityController entityController)
         {
-            _playerController = playerController;
-            _moveSpeed = _playerController.MoveSpeed;
-            _moveboundary = _playerController.MoveBoundary;
+            _playerController = entityController;
+            //_moveSpeed = _playerController.MoveSpeed;
+           // _moveboundary = _playerController.MoveBoundary;
         }
 
-        public void TickFixed (float horizontal)
+        public void FixedTick (float horizontal)
         {
             if(horizontal==0f){return;}//early return
 

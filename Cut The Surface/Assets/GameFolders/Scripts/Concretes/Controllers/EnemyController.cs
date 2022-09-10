@@ -1,13 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Abstracts.Controllers;
 using CutTheSurface.Managers;
 using CutTheSurface.Movements;
 using UnityEngine;
 
 namespace CutTheSurface.Controllers
 {
-    public class EnemyController : MonoBehaviour
+    public class EnemyController : MonoBehaviour,IEntityController
     {
         [SerializeField]  float _moveSpeed=10f;
         [SerializeField] private float _maxLifeTime = 7f;

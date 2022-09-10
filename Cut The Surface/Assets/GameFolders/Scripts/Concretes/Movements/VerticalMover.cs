@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Abstracts.Controllers;
+using CutTheSurface.Abstracts.Movements;
 using CutTheSurface.Controllers;
 using UnityEngine;
 
 namespace CutTheSurface.Movements
 {
-    public class VerticalMover
+    public class VerticalMover:IMover
     {
-        EnemyController _enemyController;
+        IEntityController _entityController;
         float _moveSpeed;
 
-        public VerticalMover(EnemyController enemyController)
+        public VerticalMover(IEntityController entityController)
         {
-            _enemyController = enemyController;
-            _moveSpeed = _enemyController.MoveSpeed;
+            _entityController = entityController;
+            _moveSpeed = _entityController.MoveSpeed;
         }
 
         public void FixedTick(float vertical = 1 )
         {
-            _enemyController.transform.Translate(Vector3.back * vertical * _moveSpeed * Time.deltaTime);
+            _entityController.transform.Translate(Vector3.back * vertical * _moveSpeed * Time.deltaTime);
         }
 
 

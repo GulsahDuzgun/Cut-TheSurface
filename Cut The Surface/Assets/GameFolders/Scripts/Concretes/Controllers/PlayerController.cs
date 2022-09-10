@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Abstracts.Controllers;
 using CutTheSurface.Abstracts.Inputs;
+using CutTheSurface.Abstracts.Movements;
 using CutTheSurface.JumWithRigidBody;
 using CutTheSurface.Managers;
 using CutTheSurface.Movements;
@@ -11,7 +13,7 @@ using UnityEngine.InputSystem;
 namespace CutTheSurface.Controllers
 {
     
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour,IEntityController
     {
         [SerializeField] private float _moveSpeed = 10f;
         [SerializeField] private float _addForce=300f;
@@ -22,14 +24,14 @@ namespace CutTheSurface.Controllers
         bool _isJump;
         bool _isdead = false;
         
-        private HorizontalMover _horizontalMover;
-        private JumpWithRigidBody _jumpWithRigidBody;
+         IMover _mover;
+         IJump _jumpWithRigidBody;
         public float MoveSpeed => _moveSpeed;
         public float MoveBoundary => _moveBoundary;
         
         private void Awake()
         {
-            _horizontalMover = new HorizontalMover(this);
+            _mover = new HorizontalMover(this);
             _jumpWithRigidBody = new JumpWithRigidBody(this);
             _input = new InputReader(GetComponent<PlayerInput>());
         }
@@ -50,11 +52,11 @@ namespace CutTheSurface.Controllers
         private void FixedUpdate()
         {
             Debug.Log(_isJump);
-            _horizontalMover.TickFixed(_horizontal );
+            _mover.FixedTick(_horizontal );
 
             if (_isJump)
             {
-                _jumpWithRigidBody.TickFixed(_addForce);
+                _jumpWithRigidBody.FixedTick(_addForce);
                 _isJump = false;
             }
             
@@ -62,8 +64,8 @@ namespace CutTheSurface.Controllers
 
         void OnTriggerEnter(Collider other)
         {
-            EnemyController enemyController = other.GetComponent<EnemyController>();
-            if (enemyController != null)
+            IEntityController entityController = other.GetComponent<IEntityController>();
+            if (entityController != null)
             {
                 _isdead = true;
                 GameManager.Instance.StopGame();

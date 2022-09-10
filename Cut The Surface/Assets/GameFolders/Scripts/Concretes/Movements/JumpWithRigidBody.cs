@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Abstracts.Movements;
 using CutTheSurface.Controllers;
 using UnityEngine;
 
 namespace  CutTheSurface.JumWithRigidBody
 {
-    public class JumpWithRigidBody
+    public class JumpWithRigidBody:IJump
     {
         private Rigidbody _rigidbody;
         
@@ -18,7 +19,7 @@ namespace  CutTheSurface.JumWithRigidBody
             
         }
 
-        public void TickFixed(float jumpForce)
+        public void FixedTick(float jumpForce)
         {
             if (CanJump) return;
             _rigidbody.velocity = Vector3.zero;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Managers;
 using CutTheSurface.Movements;
 using UnityEngine;
 
@@ -11,9 +12,9 @@ namespace CutTheSurface.Controllers
         [SerializeField]  float _moveSpeed=10f;
         [SerializeField] private float _maxLifeTime = 7f;
         public float MoveSpeed => _moveSpeed;
-        float _currentLifeTime = 0f;
-        
+        float _currentLifeTime = 0f; 
         VerticalMover _mover;
+        
         void Awake()
         {
             _mover = new VerticalMover(this);
@@ -36,7 +37,7 @@ namespace CutTheSurface.Controllers
 
         void KillYourself()
         {
-            Destroy(this.gameObject);   
+            EnemyManager.Instance.SetPool(this); 
         }
     }
     

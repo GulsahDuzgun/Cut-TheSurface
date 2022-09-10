@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using CutTheSurface.Abstracts.Controllers;
+using CutTheSurface.Enums;
 using CutTheSurface.Managers;
 using CutTheSurface.Movements;
 using UnityEngine;
@@ -10,10 +11,12 @@ namespace CutTheSurface.Controllers
 {
     public class EnemyController : MyCharacterController,IEntityController
     {
+         [SerializeField]  EnemyEnum _enemyEnum;
          [SerializeField] private float _maxLifeTime = 7f;
         
         float _currentLifeTime = 0f; 
         VerticalMover _mover;
+        public EnemyEnum EnemyType => _enemyEnum;
      
        
         void Awake()

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using CutTheSurface.Enums;
 using CutTheSurface.Managers;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -17,7 +18,9 @@ namespace CutTheSurface.Controllers
 
         float _maxSpawnTime;
         float _currentSpawnTime=0f;
-
+        private int _index = 0;
+        private float _maxAddEnemyTime;
+        public bool CanIncrease => _index < EnemyManager.Instance.Count;
         private void OnEnable()
         {
             GetRandomMaxTime();
@@ -30,11 +33,18 @@ namespace CutTheSurface.Controllers
             {
                 Spawn();
             }
+            if(!CanIncrease) return;
+
+            if (_maxAddEnemyTime < Time.time)
+            {
+                _maxAddEnemyTime = Time.time + EnemyManager.Instance.AddDelayTime;
+                IncreaseIndex();
+            }
         }
 
         void Spawn()
-        {
-            EnemyController newEnemy = EnemyManager.Instance.GetPool();
+        {  
+            EnemyController newEnemy = EnemyManager.Instance.GetPool((EnemyEnum)Random.Range(0,4));
             newEnemy.transform.parent = this.transform;
             newEnemy.transform.position = this.transform.position;
             newEnemy.gameObject.SetActive(true);
@@ -46,6 +56,14 @@ namespace CutTheSurface.Controllers
         private void GetRandomMaxTime()
         {
             _maxSpawnTime = Random.Range(_min, _max);
+        }
+
+        void IncreaseIndex()
+        {
+            if (CanIncrease)
+            {
+                _index++;
+            }
         }
     }
     

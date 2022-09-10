@@ -9,15 +9,23 @@ namespace CutTheSurface.Managers
 {
     public class GameManager : SingletonMonoBehaviorObject<GameManager>
     {
+        public event System.Action OnGameStop;
         private void Awake()
         {
-            this.gameObject.SetActive(true);
+           
             SingletonThisObject(this);
         }
+
         public void StopGame()
         {
+            //Oyunu durduruyoruz
             Time.timeScale = 0f;
-        }
+
+            OnGameStop?.Invoke();
+            //if(GameStop!= null ){
+            // OnGameStopp()
+            //}
+    }
 
         public void LoadScene( string sceneName)
         {

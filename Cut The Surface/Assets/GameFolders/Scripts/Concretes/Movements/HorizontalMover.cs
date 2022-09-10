@@ -16,8 +16,8 @@ namespace CutTheSurface.Movements
         public HorizontalMover(IEntityController entityController)
         {
             _playerController = entityController;
-            //_moveSpeed = _playerController.MoveSpeed;
-           // _moveboundary = _playerController.MoveBoundary;
+            _moveSpeed = _playerController.MoveSpeed;
+           _moveboundary = _playerController.MoveBoundary;
         }
 
         public void FixedTick (float horizontal)

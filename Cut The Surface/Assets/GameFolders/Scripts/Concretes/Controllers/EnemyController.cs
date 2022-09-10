@@ -8,14 +8,14 @@ using UnityEngine;
 
 namespace CutTheSurface.Controllers
 {
-    public class EnemyController : MonoBehaviour,IEntityController
+    public class EnemyController : MyCharacterController,IEntityController
     {
-        [SerializeField]  float _moveSpeed=10f;
-        [SerializeField] private float _maxLifeTime = 7f;
-        public float MoveSpeed => _moveSpeed;
+         [SerializeField] private float _maxLifeTime = 7f;
+        
         float _currentLifeTime = 0f; 
         VerticalMover _mover;
-        
+     
+       
         void Awake()
         {
             _mover = new VerticalMover(this);

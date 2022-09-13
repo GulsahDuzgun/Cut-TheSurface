@@ -287,7 +287,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1295753159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1070,3 +1070,21 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4863055923418203986, guid: 95a571fbaed0e2c4c9b4591fee9c0e9f, type: 3}
   m_PrefabInstance: {fileID: 8075366590551637821}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6002117706426957383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2547552369173463418, guid: 95a571fbaed0e2c4c9b4591fee9c0e9f, type: 3}
+  m_PrefabInstance: {fileID: 8075366590551637821}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &682751968253302852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6002117706426957383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41147dc1270fd514a9c8b405e7b2ffd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverPanel: {fileID: 1295753160}

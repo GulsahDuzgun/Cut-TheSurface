@@ -123,40 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &387797699 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1403082206540993258, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-  m_PrefabInstance: {fileID: 1007003477608460816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &387797701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 387797699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09fd231f38a46e5418051307d2c379d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &620740926 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8119061343550056174, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-  m_PrefabInstance: {fileID: 1007003477608460816}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &620740928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 620740926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09fd231f38a46e5418051307d2c379d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +294,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 461, y: -8696, z: 26275}
+  m_LocalPosition: {x: 455.21, y: -8696, z: 26279.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -375,37 +341,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 620740928}
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ExitButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CutTheSurface.Uis.MenuPanel, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1557472571305584270, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4189933275142402149, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
       propertyPath: m_Name
       value: MenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417459689888758093, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6485764986081261133, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
       propertyPath: m_Pivot.x
@@ -490,38 +432,6 @@ PrefabInstance:
     - target: {fileID: 6485764986081261133, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 620740928}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: StartButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: CutTheSurface.Uis.MenuPanel, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MENU
-      objectReference: {fileID: 0}
-    - target: {fileID: 6825966839451990639, guid: 52a0023266d024d49be0d85e98920db7, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a0023266d024d49be0d85e98920db7, type: 3}

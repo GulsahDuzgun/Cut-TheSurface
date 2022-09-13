@@ -9,12 +9,12 @@ namespace CutTheSurface.Uis
     {
         public void TryAgainButton()
         {
-            GameManager.Instance.LoadScene("Game");
+           GameManager.Instance.LoadScene("Game");
         }
 
         public void QuitButton()
         {
-            GameManager.Instance.LoadScene("Menu");
+          GameManager.Instance.LoadScene("Menu");
         }
 
     }

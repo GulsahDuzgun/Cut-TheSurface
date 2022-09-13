@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1b3e27ebb8551d6489469ade06e0a58c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _floorPrefab: {fileID: 7756547694948434207, guid: cea8ea0d6de0e094d90682999c194fc4, type: 3}
+  - _spawnerPrefabs: {fileID: 8045494303410215264, guid: 4d9b99cfcb09e444092efba0a1f3bbcb, type: 3}
+  - _skyboxMaterial: {fileID: 2100000, guid: a07fadb24ea940240afba3afc1a692cc, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

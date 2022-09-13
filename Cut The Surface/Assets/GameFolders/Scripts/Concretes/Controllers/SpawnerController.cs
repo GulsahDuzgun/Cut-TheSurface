@@ -29,10 +29,12 @@ namespace CutTheSurface.Controllers
         void Update()
         {
             _currentSpawnTime += Time.deltaTime;
+            
             if (_currentSpawnTime > _maxSpawnTime)
             {
                 Spawn();
             }
+            
             if(!CanIncrease) return;
 
             if (_maxAddEnemyTime < Time.time)

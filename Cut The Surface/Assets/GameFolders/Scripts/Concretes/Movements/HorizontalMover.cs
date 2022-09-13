@@ -10,23 +10,20 @@ namespace CutTheSurface.Movements
 {
     public class HorizontalMover:IMover
     {
-        IEntityController _playerController;
-        float _moveSpeed;
-        float _moveboundary;
+        IEntityController _entityController;
         public HorizontalMover(IEntityController entityController)
         {
-            _playerController = entityController;
-            _moveSpeed = _playerController.MoveSpeed;
-           _moveboundary = _playerController.MoveBoundary;
+            _entityController = entityController;
+           
         }
 
         public void FixedTick (float horizontal)
         {
             if(horizontal==0f){return;}//early return
 
-            _playerController.transform.Translate(Vector3.right * horizontal * Time.deltaTime * _moveSpeed);
-            float moveboundary = Math.Clamp(_playerController.transform.position.x,-_moveboundary,_moveboundary);
-            _playerController.transform.position=new Vector3(moveboundary,_playerController.transform.position.y,0f);
+            _entityController.transform.Translate(Vector3.right * horizontal * Time.deltaTime * _entityController.MoveSpeed);
+            float moveboundary = Math.Clamp(_entityController.transform.position.x,-_entityController.MoveBoundary,_entityController.MoveBoundary);
+            _entityController.transform.position=new Vector3(moveboundary,_entityController.transform.position.y,0f);
         }
     }
     

@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _moveSpeed: 10
-  _addForce: 2500
   _moveBoundary: 4.5
+  _addForce: 1500
 --- !u!114 &7618272265082716088
 MonoBehaviour:
   m_ObjectHideFlags: 0

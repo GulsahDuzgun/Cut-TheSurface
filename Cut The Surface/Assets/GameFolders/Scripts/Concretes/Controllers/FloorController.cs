@@ -9,7 +9,7 @@ namespace CutTheSurface.Controllers
 {
     public class FloorController : MonoBehaviour
     {
-        [Range(0.5f,1f)]
+        [Range(0.5f,3f)]
         [SerializeField] public  float _moveSpeed=0.5f;
         Material [] _material;
         private Vector2 Offset;

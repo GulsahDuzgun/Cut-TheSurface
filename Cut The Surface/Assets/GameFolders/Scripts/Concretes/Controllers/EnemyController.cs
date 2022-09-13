@@ -43,6 +43,12 @@ namespace CutTheSurface.Controllers
         {
             EnemyManager.Instance.SetPool(this); 
         }
+
+        public void SetMoveSpeed(float moveSpeed=10f)
+        { //Gelen değer var olandan küçükse return eder
+            if (moveSpeed < _moveSpeed) return;
+            _moveSpeed = moveSpeed;
+        }
     }
     
 }

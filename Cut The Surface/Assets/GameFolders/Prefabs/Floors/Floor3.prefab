@@ -10,14 +10,14 @@ PrefabInstance:
     - target: {fileID: 273559946363229837, guid: c88aed46edee374408dfa68edc5d6880, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 78974d2f85a59fc499d154e567c11d49, type: 2}
+      objectReference: {fileID: 2100000, guid: 35df40f761814274781e96c08282a5c7, type: 2}
     - target: {fileID: 3158156919860880307, guid: c88aed46edee374408dfa68edc5d6880, type: 3}
       propertyPath: _moveSpeed
-      value: 1.25
+      value: 1.88
       objectReference: {fileID: 0}
     - target: {fileID: 5317997772546648545, guid: c88aed46edee374408dfa68edc5d6880, type: 3}
       propertyPath: m_Name
-      value: Floor2
+      value: Floor3
       objectReference: {fileID: 0}
     - target: {fileID: 9147111044686981911, guid: c88aed46edee374408dfa68edc5d6880, type: 3}
       propertyPath: m_RootOrder

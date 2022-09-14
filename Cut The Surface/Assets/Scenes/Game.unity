@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1295753159, guid: 7cf99bd4d4f7d4f40953ab90e99c4bc1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.5
+      objectReference: {fileID: 0}
     - target: {fileID: 900827754247098901, guid: 7cf99bd4d4f7d4f40953ab90e99c4bc1, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 532
@@ -585,6 +589,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 724780814687732418, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 724780814687732418, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 724780814687732418, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8581
+      objectReference: {fileID: 0}
+    - target: {fileID: 724780814687732418, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
       objectReference: {fileID: 0}
@@ -627,6 +643,42 @@ PrefabInstance:
     - target: {fileID: 1213231556245536556, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5269482352732698734, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_UIInputModule
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: PlayerOnFoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: c34dd168-cea8-4ce5-9c27-1c74290367b8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: 4dd0c997-351e-403f-aa6f-0f6267d98314
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: PlayerOnFoot/HorizontalMove[/Keyboard/a,/Keyboard/d]
+      objectReference: {fileID: 0}
+    - target: {fileID: 7618272265082716088, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: PlayerOnFoot/Jump[/Keyboard/space]
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf142b33a429c4d47917fa40b8583006, type: 3}
